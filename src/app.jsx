@@ -3,6 +3,7 @@ import REACTDOM from 'react-dom';
 import './index.css';
 
 import Coverage from './components/coverage';
+import CoverageSummary from './components/coverage-summary';
 
 export default class App extends React.Component {
 	render() {
@@ -19,6 +20,10 @@ export default class App extends React.Component {
 						<Coverage branch="your"/>
 						<button className="float-right btn btn-info">Generate Delta</button>
 					</div>
+				</div>
+
+				<div className="row">
+					<CoverageSummary />
 				</div>
 			</div>
 		);
