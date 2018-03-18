@@ -9,8 +9,8 @@ export default class App extends React.Component {
 	render() {
 		return (
 			<div className="container-fluid px-0">
-				<div className="jumbotron">
-					<h3>Coverage</h3>
+				<div className="jumbotron text-center">
+					<h1 style={styles.title}>Coverage Summary</h1>
 				</div>
 				<div className="row">
 					<div className="col-10 mx-auto">
@@ -28,4 +28,11 @@ export default class App extends React.Component {
 			</div>
 		);
 	}
+}
+
+const styles = {
+	title: {
+		fontSize: 70,
+		fontFamily: 'Roboto',
+	},
 }
