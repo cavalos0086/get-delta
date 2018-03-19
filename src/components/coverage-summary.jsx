@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function coverageSummary(props) {
 	return (
-		<div className="col-10 my-4 mx-auto">
+		<div className="col-9 mx-auto">
 			<div className="card">
 				<div className="card-body">
 					<h5 className="card-title text-center my-4">Coverage Summary</h5>

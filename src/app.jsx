@@ -4,29 +4,32 @@ import './index.css';
 
 import Coverage from './components/coverage';
 import CoverageSummary from './components/coverage-summary';
+import DevBranch from './components/dev-branch';
+import LocalBranch from './components/local-branch';
 
 export default class App extends React.Component {
+
+	constructor(props) {
+		super(props);
+		this.state = {val: 1};
+	}
+
 	render() {
 		return (
-			<div className="container-fluid px-0">
-				<div className="jumbotron text-center">
-					<h1 style={styles.title}>Coverage Summary</h1>
-				</div>
+			<div className="container-fluid mt-5">
+				<DevBranch onChange="setDevCoverage()" />
+				<LocalBranch />
 				<div className="row">
-					<div className="col-10 mx-auto">
-						<h3 className="text-center">DEV branch</h3>
-						<Coverage branch="dev"/>
-						<h3 className="text-center">YOUR branch</h3>
-						<Coverage branch="your"/>
-						<button className="float-right btn btn-info">Generate Delta</button>
+					<div className="col-8 mx-auto">
+						<button className="btn btn-primary float-right">get Coverage</button>
 					</div>
-				</div>
-
-				<div className="row">
-					<CoverageSummary />
 				</div>
 			</div>
 		);
+	}
+
+	setDevCoverage() {
+
 	}
 }
 
